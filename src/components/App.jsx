@@ -4,13 +4,14 @@ import data from '../data.json';
 import friends from '../friends.json';
 import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './FriendList/FriendList';
+import { Layout } from './Layout';
 
 export const App = () => {
   return (
-    <div>
+    <Layout>
     <Profile items={user}/>
     <Statistics title="Upload stats" data={data}/>
     <FriendList friends={friends}/>
-    </div>
+    </Layout>
   );
 };
