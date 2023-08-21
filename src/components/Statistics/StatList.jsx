@@ -1,5 +1,6 @@
 import { ListItem } from "./ListItem"
 import { ListItemStyle, StatListStyle } from "./StatList.styled"
+import PropTypes from 'prop-types'
 
 export const StatList = ({stats})=>{
     return (
@@ -10,4 +11,14 @@ export const StatList = ({stats})=>{
    })}
   </StatListStyle>
   )
+}
+
+StatList.propTypes = {
+  stats:PropTypes.arrayOf(
+    PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired
+    })
+).isRequired
 }

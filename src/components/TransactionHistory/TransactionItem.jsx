@@ -1,4 +1,5 @@
 import { ItemText, TableItem } from "./TransactionItem.styled"
+import PropTypes from 'prop-types'
 
 export const TransactionItem = ({id, type, amount, currency}) =>{
     return (
@@ -9,4 +10,11 @@ export const TransactionItem = ({id, type, amount, currency}) =>{
     </TableItem>
     )
     
+}
+
+TransactionItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+  amount:PropTypes.string.isRequired
 }
