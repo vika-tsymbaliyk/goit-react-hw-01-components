@@ -13,5 +13,5 @@ display: flex;
 `
 export const ListItemStyle = styled.li`
 background-color: ${getRandomHexColor};
-padding: 15px;
+padding: 10px 20px;
 `

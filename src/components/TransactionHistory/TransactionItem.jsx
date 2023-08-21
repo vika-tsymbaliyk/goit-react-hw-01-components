@@ -1,10 +1,12 @@
+import { ItemText, TableItem } from "./TransactionItem.styled"
+
 export const TransactionItem = ({id, type, amount, currency}) =>{
     return (
-        <tr key ={id}>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+      <TableItem key ={id}>
+      <ItemText>{type}</ItemText>
+      <ItemText>{amount}</ItemText>
+      <ItemText>{currency}</ItemText>
+    </TableItem>
     )
     
 }

@@ -1,9 +1,11 @@
+import { ItemWrap, TextLabel, TextPercentage } from "./ListItem.styled"
+
 export const ListItem = ({ listItem : { label, percentage } } )=>{
     return (
-        <div > 
-       <span className="label">{label}</span>
-      <span className="percentage">{percentage}</span>
-        </div>
+        <ItemWrap> 
+       <TextLabel >{label}</TextLabel>
+      <TextPercentage>{percentage}%</TextPercentage>
+        </ItemWrap>
     )
 
 }
