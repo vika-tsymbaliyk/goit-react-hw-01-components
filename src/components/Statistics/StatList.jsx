@@ -1,12 +1,13 @@
 import { ListItem } from "./ListItem"
+import { ListItemStyle, StatListStyle } from "./StatList.styled"
 
 export const StatList = ({stats})=>{
     return (
-   <ul> 
+   <StatListStyle> 
     {stats.map(item =>{
-    return <li key = {item.id}><ListItem listItem={item}/>
-    </li>
+    return <ListItemStyle key = {item.id}><ListItem listItem={item}/>
+    </ListItemStyle>
    })}
-  </ul>
+  </StatListStyle>
   )
 }

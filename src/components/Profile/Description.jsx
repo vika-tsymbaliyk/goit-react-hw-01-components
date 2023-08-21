@@ -1,15 +1,17 @@
+import { Avatar, DescriptionWrap, UserLocation, UserName, UserTag } from "./Description.styled"
+
 export const Description = ({items:{username, tag, location, avatar}})=>{
     return (
-        <div >
-    <img
+        <DescriptionWrap>
+    <Avatar
       src={avatar}
       alt="User avatar"
       
     />
-    <p className="name">{username}</p>
-    <p className="tag">@{tag}</p>
-    <p className="location">{location}</p>
-  </div>
+    <UserName>{username}</UserName>
+    <UserTag>@{tag}</UserTag>
+    <UserLocation>{location}</UserLocation>
+  </DescriptionWrap>
     )
     
 }

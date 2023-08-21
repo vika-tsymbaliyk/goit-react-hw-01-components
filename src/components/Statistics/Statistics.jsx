@@ -1,12 +1,13 @@
-import { StatList } from "./StatList"
-import { StatTitle } from "./StatTitle"
+import { StatList } from "./StatList";
+import { StatisticSection, Title } from "./Statistics.styled";
+
 
 export const Statistics = ({title,data}) =>{
     return (
-        <div>
-    <StatTitle title= {title}/>
+        <StatisticSection>
+    {title && <Title className="title">{title}</Title>}
     <StatList stats={data}/>
-    </div>
+    </StatisticSection>
     )
     
 }

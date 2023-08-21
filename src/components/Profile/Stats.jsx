@@ -1,19 +1,21 @@
+import { Label, Quantity, StatsItem, StatsList } from "./Stats.styled"
+
 export const Stats = ({items:{stats:{followers, views, likes}}})=>{
     return (
-        <ul>
-    <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{followers}</span>
-    </li>
-    <li>
-      <span className="label">Views</span>
-      <span className="quantity">{views}</span>
-    </li>
-    <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{likes}</span>
-    </li>
-  </ul>
+        <StatsList>
+    <StatsItem>
+      <Label>Followers</Label>
+      <Quantity>{followers}</Quantity>
+    </StatsItem>
+    <StatsItem>
+      <Label>Views</Label>
+      <Quantity>{views}</Quantity>
+    </StatsItem>
+    <StatsItem>
+      <Label>Likes</Label>
+      <Quantity>{likes}</Quantity>
+    </StatsItem>
+  </StatsList>
     )
 
 }
