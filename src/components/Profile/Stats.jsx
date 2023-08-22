@@ -1,7 +1,7 @@
 import { Label, Quantity, StatsItem, StatsList } from "./Stats.styled"
 import PropTypes from 'prop-types'
 
-export const Stats = ({stats:{followers, views, likes}})=>{
+export const Stats = ({items:{followers, views, likes}})=>{
     return (
         <StatsList>
     <StatsItem>
@@ -22,7 +22,7 @@ export const Stats = ({stats:{followers, views, likes}})=>{
 }
 
 Stats.propTypes = {
-  stats:PropTypes.shape({
+  items:PropTypes.shape({
   followers:  PropTypes.number.isRequired, 
   views: PropTypes.number.isRequired, 
   likes:  PropTypes.number.isRequired
